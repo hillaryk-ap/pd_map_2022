@@ -1,4 +1,72 @@
 {
-    "sources": {},
-    "layers": []
+    "sources": {
+        "sites" : {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        },
+
+        "neighborhoods" : {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        }
+    },
+    "layers": [
+        {
+            "id": "neighborhoods-fill",
+            "type": "fill-extrusion",
+            "source": "neighborhoods",
+            "paint": {
+                "fill-extrusion-color": [
+                    "step",
+                    ["get", "count"],
+                    "#C6D7FF", 
+                        50,
+                    "#9EACDD", 
+                        100,
+                    "#7681BC", 
+                        300,
+                    "#4F569B", 
+                        600,
+                    "#272B7A", 
+                        1000,
+                    "#000059"
+                ],
+                "fill-extrusion-opacity": 1,
+                "fill-extrusion-height": ["*", ["get", "count"], 5]
+
+            }
+        },
+
+        {
+            "id": "neighborhoods-stroke",
+            "type": "line",
+            "source": "neighborhoods",
+            "paint": {
+                "line-color": "black",
+                "line-width": 4
+            }
+        },
+
+        {
+            "id": "sites-circles",
+            "type": "circle",
+            "source": "sites",
+            "paint": {
+                "circle-color": "blue",
+                "circle-opacity": 0.2
+            },
+            "layout": {
+                "visibility": "visible"
+            }
+        }
+
+        
+    ]
 }
+

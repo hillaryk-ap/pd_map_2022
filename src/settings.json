@@ -3,5 +3,6 @@
     "accessToken": "pk.eyJ1IjoiaGtoYW4yNyIsImEiOiJjbDg2M3EwYXYwN3Y5M25waXgzdXVveWpkIn0._sGa6O99xF_fFHR0IpdP0Q",
     "style": "mapbox://styles/hkhan27/cl868zi2q001e15lp13byzk3j",
     "center": [-118.243170, 34.028247],
-    "zoom": 9.29
+    "zoom": 9.29,
+    "pitch": 40
 }
